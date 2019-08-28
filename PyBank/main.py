@@ -23,11 +23,6 @@ with open(budget_csv, 'r') as csvfile:
             
     csv_header = next(csvreader)
     
-    # Using Comprehension Method :
-    
-    #Months = [Month for Month in csvreader]
-    #print(len(Months))
-    
     # Loop through the data
     
     for row in csvreader:
@@ -54,14 +49,25 @@ Greatest_Decrease = min(Change_Profit_Loss)
 Greatest_Increase_Month = Months[Change_Profit_Loss.index(Greatest_Increase)+1]
 Greatest_Decrease_Month = Months[Change_Profit_Loss.index(Greatest_Decrease)+1]
         
-#Displaying the Final Output        
+#Displaying the Final Output
+output = (
+f"\n-----------------------------------------------------"
+f"\n                 Financial Analysis                  "    
+f"\n-----------------------------------------------------" 
+f"\n"   
+f"\n Total Months : {Total_Months} \n"
+f"\n Total Amount : ${Total_Amount} \n"
+f"\n Average Change: ${Average_Change} \n"
+f"\n Greatest Increase in Profits: {Greatest_Increase_Month} (${str(Greatest_Increase)}) \n"
+f"\n Greatest Decrease in Profits: {Greatest_Decrease_Month} (${str(Greatest_Decrease)}) \n"
+f"\n-----------------------------------------------------"
 
-print("\n-----------------------------------------------------")
-print("                 Financial Analysis                    ")    
-print("-----------------------------------------------------\n")    
-print(f" Total Months : {Total_Months}\n")
-print(f" Total Amount : ${Total_Amount}\n")
-print(f" Average Change: ${Average_Change}\n")
-print(f" Greatest Increase in Profits: {Greatest_Increase_Month} (${str(Greatest_Increase)})\n")
-print(f" Greatest Decrease in Profits: {Greatest_Decrease_Month} (${str(Greatest_Decrease)})")
-print("\n-----------------------------------------------------")  
+)
+print(output)
+
+#Exporting the Final Output to a Text
+output_to_txt = os.path.join('..', 'PyBank','Output', 'Pybank_Financial_Analysis.txt')
+with open(output_to_txt, "w") as txt_file:
+    txt_file.write(output)
+
+print("\n \n The Financial Analysis Output has been Exported to Pybank_Financial_Analysis.txt file. \n \n ")
