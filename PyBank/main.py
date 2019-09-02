@@ -67,7 +67,8 @@ f"\n-----------------------------------------------------"
 )
 print(output)
 
-#Exporting the Final Output to a Text
+#Exporting the Final Output to a Text File
+
 output_to_txt = os.path.join('..', 'PyBank','Output', 'Pybank_Financial_Analysis.txt')
 with open(output_to_txt, "w") as txt_file:
     txt_file.write(output)
