@@ -5,7 +5,7 @@ This is Python Assignment based on two Challenges.
 
 The Document "Python_HW_Sara_Dcoumentation" contains all the below details about the Assignment.
 
-Background
-Pre Work - GitHub 
-Instructions
-Script Explanation
+1) Background
+2) Pre Work - GitHub 
+3) Instructions
+4) Script Explanation
