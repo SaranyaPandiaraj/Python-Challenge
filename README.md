@@ -9,3 +9,8 @@ The Document "Python_HW_Sara_Dcoumentation" contains all the below details about
 2) Pre Work - GitHub 
 3) Instructions
 4) Script Explanation
+
+Apart from the Python Challenge, the below extra content activities has been done as part of the assignment.
+
+1) PyBoss
+2) PyParagrah
